@@ -18,4 +18,14 @@ args = parser.parse_args()
 with open(args.diccionario) as file:
     wordlist = file.read().splitlines()
 
+try:
+    barra = tqdm(total=len(wordlist), desc="Progreso", unit="urls", dynamic_ncols=True)
+    for linea in wordlist:
+        url_completa = args.url + linea
+        response = requests.get(url_completa)
+        if response.status_code == 200:
+            tqdm.write("Directorios encontrados: " + colored(f"{url_completa}", "green"))
+            barra.update(1)
     
+finally :
+    barra.close()
