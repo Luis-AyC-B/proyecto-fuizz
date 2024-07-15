@@ -14,3 +14,8 @@ parser = argparse.ArgumentParser(description="Fuzzing")
 parser.add_argument("url", help="Proporcionar una url")
 parser.add_argument("diccionario", help="Proporcionar un diccionario")
 args = parser.parse_args()
+
+with open(args.diccionario) as file:
+    wordlist = file.read().splitlines()
+
+    
