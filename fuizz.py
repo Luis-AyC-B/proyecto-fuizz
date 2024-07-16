@@ -23,6 +23,8 @@ parser.add_argument("diccionario", help="Proporcionar un diccionario")
 parser.add_argument("--threads", type=int, default=10, help="Número de hilos concurrentes (por defecto: 10)")
 parser.add_argument("--headers", type=str, help="Cabeceras en formato JSON")
 parser.add_argument("--data", type=str, help="Datos del cuerpo de la solicitud en formato JSON")
+parser.add_argument("--show_headers", action="store_true", help="Mostrar cabeceras de la respuesta")
+parser.add_argument("--show_body", action="store_true", help="Mostrar cuerpo de la respuesta")
 args = parser.parse_args()
 
 with open(args.diccionario) as file:
@@ -48,6 +50,17 @@ def fuzzing(url, wordlist, headers=None, data=None):
                 with lock:
                     found_directories.append(url_completa)
                     tqdm.write("Directorios encontrados: " + colored(f"{url_completa}", "green"))
+
+                     if show_headers:
+                        tqdm.write("Cabeceras:")
+                        for key, value in response.headers.items():
+                            tqdm.write(f"{key}: {value}")
+                    
+                    
+                    if show_body:
+                        tqdm.write("Cuerpo de la respuesta:")
+                        tqdm.write(response.text)
+
         except requests.RequestException as e:
             tqdm.write(colored(f"Error al acceder a {url_completa}: {e}", "red"))
         finally:
