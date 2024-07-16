@@ -49,6 +49,7 @@ def fuzzing(url, wordlist, headers=None):
         try:
             user_agent = ua.random  
             headers['User-Agent'] = user_agent  
+            print(user_agent)
             response = requests.get(url_completa, headers=headers)
             with lock:
                 barra.update(1)
@@ -56,8 +57,7 @@ def fuzzing(url, wordlist, headers=None):
                     found_directories.append((url_completa, response.status_code))  
                     tqdm.write("Directorios encontrados: " + colored(f"{url_completa}", "green"))
                     tqdm.write("Código de estado: " + colored(f"{response.status_code}", "blue"))
-                else:
-                    tqdm.write("No encontrado: " + colored(f"{url_completa} - Código de estado: {response.status_code}", "red"))
+               
         except requests.RequestException as e:
             with lock:
                 tqdm.write(colored(f"Error al acceder a {url_completa}: {e}", "red"))
