@@ -49,7 +49,8 @@ def fuzzing(url, wordlist, headers=None, data=None):
             if response.status_code == 200:
                 with lock:
                     found_directories.append(url_completa)
-                    tqdm.write("Directorios encontrados: " + colored(f"{url_completa}", "green"))
+                    size = len(response.contet)
+                    tqdm.write("Directorios encontrados: " + colored(f"{url_completa}" + " Tamnio Res.:"+colored(f"{size}"), "green"))
 
                      if show_headers:
                         tqdm.write("Cabeceras:")
