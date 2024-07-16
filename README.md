@@ -18,7 +18,7 @@ Asi que fusinamos Fuzz con luis y nace FUIZZ.
 
 5.-Como se usa el fuizz
 
-Mi Fuizz por ahora solo esta en base a URL, yo le proporciono una URL y me entrega otras URLS, como el funcionamiento de fuzzer basico
+Mi Fuizz por ahora solo esta en base a URL, yo le proporciono una URL y me entrega otras URLs.
 
 6.-Correcciones a futuro
 
@@ -27,4 +27,4 @@ Falta que haga las busquedas a nivel de cabecera y cuerpo.
 
 7.-observaciones 
 
-Aprendi un poco sobre python y varias cosas sobre fuzzing, pero todavia es poco y tengo que implementar mas al codigo. 
+Ahora el codigo es mas ripado gracias a la implemetacion de los hilos 
