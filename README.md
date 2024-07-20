@@ -8,11 +8,11 @@ El fuzzing es una metodología dinámica de análisis de software que implica la
 
 ## 3. ¿Por qué estoy haciendo un fuzz?
 
-Mis motivos para realizar fuzzing han evolucionado con el tiempo. Inicialmente, comencé este proyecto para prepararme y calificar en la SCESI (Supongo que es una institución o evento relacionado con la seguridad informática). Sin embargo, a medida que avanzaba, mi interés por el tema creció y ahora lo considero un proyecto personal. Mi objetivo es profundizar en mi conocimiento sobre seguridad de software y mejorar mis habilidades en esta área.
+Mis motivos para realizar fuzzing han evolucionado con el tiempo. Inicialmente, comencé este proyecto para prepararme y calificar en la SCESI. Sin embargo, a medida que avanzaba, mi interés por el tema creció y ahora lo considero un proyecto personal. Mi objetivo es profundizar en mi conocimiento sobre seguridad de software y mejorar mis habilidades en esta área.
 
 ## 4. ¿Por qué se llama mi proyecto Fuizz?
 
-El nombre de mi proyecto, Fuizz, es una combinación de las palabras "fuzzing" y "fuzz", unidas a mi nombre, Luis. De esta manera, "Fuizz" representa tanto el concepto técnico de fuzzing como mi implicación personal en el proyecto. Es un nombre único que refleja mi dedicación y creatividad en este campo.
+El nombre de mi proyecto, Fuizz, es una combinación de las palabras "fuzzing" y "fuzz", unidas a mi nombre, Luis. De esta manera, "Fuizz" representa tanto el concepto técnico de fuzzing como mi implicación personal en el proyecto. Es un nombre mio y le da un toque mio.
 
 ## 5. ¿Cómo se usa el Fuizz?
 
